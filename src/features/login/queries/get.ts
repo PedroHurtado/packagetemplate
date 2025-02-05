@@ -20,6 +20,6 @@ export default function get(app: Express, logger:Logger) {
         res.send('User created');
     }
 
-    app.get(path, authorize,validate(validators), controller);
+    app.get(path, authorize(),validate(validators), controller);
 
 }
