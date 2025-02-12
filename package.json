@@ -5,11 +5,13 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "start": "node .",
+    "start": "pnpm run build && node .",
     "build": "pnpm --filter common run build && rollup -c",
     "dev": "run-p watch:*",
     "watch:common": "pnpm --filter common run watch",
-    "watch:server": "tsx watch src/index.ts",        
+    "watch:server": "tsx watch src/index.ts",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "dist"
@@ -23,6 +25,7 @@
     "express": "^4.18.2",
     "express-validator": "^7.2.1",
     "glob": "^11.0.1",
+    "ioredis": "^5.4.2",
     "mongoose": "^8.9.5",
     "pino": "^9.6.0",
     "pino-elasticsearch": "^8.1.0",
