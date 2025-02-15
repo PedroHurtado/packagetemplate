@@ -39,6 +39,7 @@ const app = express();
         { name: 'route-login', path: '/login', methods: ['POST'] },
       ]
     );
+    health(app)
     app.listen(config.port, () => {
       console.log(`Server is running on http://localhost:${config.port}`);
     });
