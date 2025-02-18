@@ -7,6 +7,7 @@ import {
   tenat,
   redis,
   context,
+  health,
 } from '@enroll-server/common'
 import { config } from './config';
 
