@@ -5,8 +5,7 @@ import {
   registerKongEntities,
   loggerApp,
   tenat,
-  redis,
-  context,
+  redis,  
   health,
 } from '@enroll-server/common'
 import { config } from './config';
